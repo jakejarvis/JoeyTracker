@@ -6,6 +6,8 @@
 //  Copyright (c) 2012 Jake Jarvis. All rights reserved.
 //
 
+#import <Crashlytics/Crashlytics.h>
+
 #import "AppDelegate.h"
 
 #import "ETAViewController.h"
@@ -27,7 +29,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    
+    [Crashlytics startWithAPIKey:@"ad868b2e526ef2c302085800eb912abf93c6f510"];
     
     [[UIApplication sharedApplication] 
      setStatusBarHidden:NO];

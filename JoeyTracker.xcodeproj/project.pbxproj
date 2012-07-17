@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		153AD6FD15B5E9BA00A200A1 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 153AD6FC15B5E9BA00A200A1 /* Crashlytics.framework */; };
 		15754B7014D9230500F19CBF /* help.png in Resources */ = {isa = PBXBuildFile; fileRef = 15754B6E14D9230500F19CBF /* help.png */; };
 		15754B7114D9230500F19CBF /* help@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 15754B6F14D9230500F19CBF /* help@2x.png */; };
 		15754B7614D98DAF00F19CBF /* ScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15754B7514D98DAF00F19CBF /* ScheduleViewController.m */; };
@@ -39,6 +40,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		153AD6FC15B5E9BA00A200A1 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		15754B6E14D9230500F19CBF /* help.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = help.png; sourceTree = "<group>"; };
 		15754B6F14D9230500F19CBF /* help@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "help@2x.png"; sourceTree = "<group>"; };
 		15754B7414D98DA400F19CBF /* ScheduleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduleViewController.h; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 				15A3C39414D916D4007BA9DD /* UIKit.framework in Frameworks */,
 				15A3C39614D916D4007BA9DD /* Foundation.framework in Frameworks */,
 				15A3C39814D916D4007BA9DD /* CoreGraphics.framework in Frameworks */,
+				153AD6FD15B5E9BA00A200A1 /* Crashlytics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,6 +158,7 @@
 		15A3C39214D916D4007BA9DD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				153AD6FC15B5E9BA00A200A1 /* Crashlytics.framework */,
 				159C874B14D9E8CC000F76E0 /* QuartzCore.framework */,
 				15A3C39314D916D4007BA9DD /* UIKit.framework */,
 				15A3C39514D916D4007BA9DD /* Foundation.framework */,
@@ -190,6 +194,7 @@
 				15A3C38B14D916D4007BA9DD /* Sources */,
 				15A3C38C14D916D4007BA9DD /* Frameworks */,
 				15A3C38D14D916D4007BA9DD /* Resources */,
+				153AD6FA15B5E99000A200A1 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -251,6 +256,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		153AD6FA15B5E99000A200A1 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Crashlytics.framework/run ad868b2e526ef2c302085800eb912abf93c6f510";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		15A3C38B14D916D4007BA9DD /* Sources */ = {
@@ -323,6 +344,10 @@
 		15A3C3BC14D916D4007BA9DD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JoeyTracker-Prefix.pch";
 				INFOPLIST_FILE = "JoeyTracker-Info.plist";
@@ -335,6 +360,10 @@
 		15A3C3BD14D916D4007BA9DD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JoeyTracker-Prefix.pch";
 				INFOPLIST_FILE = "JoeyTracker-Info.plist";
