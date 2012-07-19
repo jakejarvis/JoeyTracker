@@ -9,10 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface ScheduleViewController : UIViewController {
-    IBOutlet UIWebView *webSchedule;
+	IBOutlet UIWebView *webSchedule;
 }
-
-@property (strong, nonatomic) UIWebView *webSchedule;
-
 
 @end

@@ -9,11 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface MapViewController : UIViewController <UIWebViewDelegate> {
-    IBOutlet UIWebView *webView;
-//    IBOutlet UIActivityIndicatorView *activityIndicator;
+	IBOutlet UIWebView *webView;
 }
-
-@property (strong, nonatomic) UIWebView *webView;
-//@property (strong, nonatomic) UIActivityIndicatorView *activityIndicator;
 
 @end

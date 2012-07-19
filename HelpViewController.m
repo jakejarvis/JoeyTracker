@@ -12,49 +12,49 @@
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    
-    if (self) {
-        self.title = NSLocalizedString(@"Help", @"Help");
-        self.tabBarItem.image = [UIImage imageNamed:@"help"];
-    }
-    
-    return self;
+	self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+	
+	if (self) {
+		self.title = NSLocalizedString(@"Help", @"Help");
+		self.tabBarItem.image = [UIImage imageNamed:@"help"];
+	}
+	
+	return self;
 }
 
 - (void)didReceiveMemoryWarning
 {
-    [super didReceiveMemoryWarning];
-    // Release any cached data, images, etc that aren't in use.
+	[super didReceiveMemoryWarning];
+	// Release any cached data, images, etc that aren't in use.
 }
 
 #pragma mark - View lifecycle
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
+	[super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    
-    
-    [[UIApplication sharedApplication] setStatusBarStyle: UIStatusBarStyleDefault];
+	
+	
+	[[UIApplication sharedApplication] setStatusBarStyle: UIStatusBarStyleDefault];
 
 }
 
 - (void)viewDidUnload
 {
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
+	[super viewDidUnload];
+	// Release any retained subviews of the main view.
+	// e.g. self.myOutlet = nil;
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    [super viewWillAppear:animated];
+	[super viewWillAppear:animated];
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
-    [super viewDidAppear:animated];
+	[super viewDidAppear:animated];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -69,23 +69,26 @@
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    // Return YES for supported orientations
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+	// Return YES for supported orientations
+	return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
-- (IBAction)jakeButtonPressed {
-    NSString *urlString = @"http://www.jakejarvis.com";
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[urlString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]]]; 
+- (IBAction)jakeButtonPressed:(id)sender
+{
+	NSString *urlString = @"http://www.jakejarvis.com";
+	[[UIApplication sharedApplication] openURL:[NSURL URLWithString:[urlString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]]]; 
 }
 
-- (IBAction)emailButtonPressed {
-    NSString *urlString = @"mailto:hello@joeytracker.com";
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[urlString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]]]; 
+- (IBAction)emailButtonPressed:(id)sender
+{
+	NSString *urlString = @"mailto:hello@joeytracker.com";
+	[[UIApplication sharedApplication] openURL:[NSURL URLWithString:[urlString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]]]; 
 }
 
-- (IBAction)tuftslifeButtonPressed {
-    NSString *urlString = @"http://www.tuftslife.com";
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[urlString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]]]; 
+- (IBAction)tuftslifeButtonPressed:(id)sender
+{
+	NSString *urlString = @"http://www.tuftslife.com";
+	[[UIApplication sharedApplication] openURL:[NSURL URLWithString:[urlString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]]]; 
 }
 
 @end

@@ -10,9 +10,8 @@
 
 @interface HelpViewController : UIViewController
 
-- (IBAction)jakeButtonPressed;
-- (IBAction)emailButtonPressed;
-- (IBAction)tuftslifeButtonPressed;
-
+- (IBAction)jakeButtonPressed:(id)sender;
+- (IBAction)emailButtonPressed:(id)sender;
+- (IBAction)tuftslifeButtonPressed:(id)sender;
 
 @end

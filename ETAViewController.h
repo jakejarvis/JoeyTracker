@@ -12,39 +12,29 @@
 #import <QuartzCore/QuartzCore.h>
 
 @interface ETAViewController : UIViewController {
-    TBXML * tbxml;
-    
-    IBOutlet UILabel *davis, *ccFront, *ccRear, *olin, *carm;
-    IBOutlet UILabel *round1, *round2, *round3, *round4, *round5;
-    IBOutlet UILabel *lastRefreshed;
-    IBOutlet UILabel *leftbg, *davisbg, *ccfrontbg, *carmbg, *olinbg, *ccrearbg;
-    IBOutlet UILabel *bground1, *bground2, *bground3, *bground4;
-    
-    IBOutlet UINavigationBar *navbar;
-    IBOutlet UIBarButtonItem *navbarrefresh;
-    
-    NSTimer *timer;
-    
-    NSString *daviseta, *ccFronteta, *ccReareta, *olineta, *carmeta;
-    
- //   NSNumber *timeLastUpdated;
-    
-    int offlineError; // 0: Not ever shown, 1: Needs to be shown, 2: Shown
+	TBXML *tbxml;
+	
+	IBOutlet UILabel *davis, *ccFront, *ccRear, *olin, *carm;
+	IBOutlet UILabel *round1, *round2, *round3, *round4, *round5;
+	IBOutlet UILabel *lastRefreshed;
+	IBOutlet UILabel *leftbg, *davisbg, *ccfrontbg, *carmbg, *olinbg, *ccrearbg;
+	
+	IBOutlet UIBarButtonItem *refreshButton;
+	
+	NSTimer *timer;
+	
+	NSString *daviseta, *ccFronteta, *ccReareta, *olineta, *carmeta;
+	
+	NSString *lastUpdatedText;
+	
+	BOOL finished;
+	
+	int offlineError; // 0: Not ever shown, 1: Needs to be shown, 2: Shown
 }
-
-@property (strong, nonatomic) UILabel *davis, *ccFront, *ccRear, *olin, *carm;
-@property (strong, nonatomic) UILabel *round1, *round2, *round3, *round4, *round5;
-@property (strong, nonatomic) UILabel *lastRefreshed;
-@property (strong, nonatomic) UILabel *leftbg, *davisbg, *ccfrontbg, *carmbg, *olinbg, *ccrearbg;
-@property (strong, nonatomic) UILabel *bground1, *bground2, *bground3, *bground4;
-
-@property (strong, nonatomic) UINavigationBar *navbar;
-@property (strong, nonatomic) UIBarButtonItem *navbarrefresh;
-
 
 
 - (void)loadETAs;
 
-- (IBAction)doRefresh;
+- (IBAction)pressRefresh:(id)sender;
 
 @end
