@@ -18,10 +18,10 @@
 	IBOutlet UIBarButtonItem *refreshButton;
 	
 	NSTimer *timer;
+    BOOL timerRunning;
 	
-	BOOL finished;
-	
-	int offlineError; // 0: Not ever shown, 1: Needs to be shown, 2: Shown
+    BOOL offline;
+	BOOL offlineErrorShown; // 0: Not ever shown, 1: Needs to be shown, 2: Shown
 }
 
 

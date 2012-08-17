@@ -16,7 +16,7 @@
 	
 	if (self) {
 		self.title = NSLocalizedString(@"Schedule", @"Schedule");
-		self.tabBarItem.image = [UIImage imageNamed:@"schedule"];
+		self.tabBarItem.image = [UIImage imageNamed:@"schedule.png"];
 	}
 	
 	return self;

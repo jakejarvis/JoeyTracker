@@ -7,9 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
 
-@interface MapViewController : UIViewController <UIWebViewDelegate> {
-	IBOutlet UIWebView *webView;
+#define METERS_PER_MILE 1609.344
+
+@interface MapViewController : UIViewController <MKMapViewDelegate> {
+	IBOutlet MKMapView *_mapView;
+    
+    NSTimer *timer;
+    BOOL timerRunning;
 }
+
+- (void)plotJoey;
 
 @end
