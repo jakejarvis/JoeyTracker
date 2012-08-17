@@ -7,13 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "TBXML.h"
-#import "TBXML+HTTP.h"
 #import <QuartzCore/QuartzCore.h>
 
 @interface ETAViewController : UIViewController {
-	TBXML *tbxml;
-	
 	IBOutlet UILabel *davis, *ccFront, *ccRear, *olin, *carm;
 	IBOutlet UILabel *round1, *round2, *round3, *round4, *round5;
 	IBOutlet UILabel *lastRefreshed;
@@ -22,10 +18,6 @@
 	IBOutlet UIBarButtonItem *refreshButton;
 	
 	NSTimer *timer;
-	
-	NSString *daviseta, *ccFronteta, *ccReareta, *olineta, *carmeta;
-	
-	NSString *lastUpdatedText;
 	
 	BOOL finished;
 	

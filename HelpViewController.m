@@ -75,13 +75,13 @@
 
 - (IBAction)jakeButtonPressed:(id)sender
 {
-	NSString *urlString = @"http://www.jakejarvis.com";
+	NSString *urlString = @"http://jakejarvis.com/";
 	[[UIApplication sharedApplication] openURL:[NSURL URLWithString:[urlString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]]]; 
 }
 
 - (IBAction)emailButtonPressed:(id)sender
 {
-	NSString *urlString = @"mailto:hello@joeytracker.com";
+	NSString *urlString = @"mailto:hello@tuftsapps.com";
 	[[UIApplication sharedApplication] openURL:[NSURL URLWithString:[urlString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]]]; 
 }
 
