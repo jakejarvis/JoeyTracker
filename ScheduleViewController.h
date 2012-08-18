@@ -10,6 +10,8 @@
 
 @interface ScheduleViewController : UIViewController {
 	IBOutlet UIWebView *webSchedule;
+    
+    NSString *html;
 }
 
 @end

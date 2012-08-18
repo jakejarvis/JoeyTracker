@@ -228,9 +228,6 @@
 {
 	[super viewDidAppear:animated];
 	
-	[[UIApplication sharedApplication] setStatusBarStyle: UIStatusBarStyleBlackTranslucent];
-	
-	
     // run the plotter for the first time, then start the timer
 	[self plotJoey];
     [self startTimer];
@@ -239,8 +236,6 @@
 - (void)viewDidDisappear:(BOOL)animated
 {
 	[super viewDidDisappear:animated];
-    
-	[[UIApplication sharedApplication] setStatusBarStyle: UIStatusBarStyleDefault];
     
     [self stopTimer];
 }

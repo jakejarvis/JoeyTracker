@@ -14,6 +14,11 @@
 		15306AFE15DEAE0500AE8E1F /* DDXMLElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 15306AF615DEAE0500AE8E1F /* DDXMLElement.m */; };
 		15306AFF15DEAE0500AE8E1F /* DDXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 15306AF815DEAE0500AE8E1F /* DDXMLNode.m */; };
 		153AD6FD15B5E9BA00A200A1 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 153AD6FC15B5E9BA00A200A1 /* Crashlytics.framework */; };
+		154D8D9F15DF14CA005143CD /* LocalyticsDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 154D8D9915DF14CA005143CD /* LocalyticsDatabase.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		154D8DA015DF14CA005143CD /* LocalyticsSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 154D8D9B15DF14CA005143CD /* LocalyticsSession.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		154D8DA115DF14CA005143CD /* LocalyticsUploader.m in Sources */ = {isa = PBXBuildFile; fileRef = 154D8D9D15DF14CA005143CD /* LocalyticsUploader.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		154D8DA415DF15DA005143CD /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 154D8DA315DF15DA005143CD /* libz.dylib */; };
+		154D8DA615DF15E3005143CD /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 154D8DA515DF15E3005143CD /* libsqlite3.dylib */; };
 		159C874C14D9E8CC000F76E0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 159C874B14D9E8CC000F76E0 /* QuartzCore.framework */; };
 		15A0D44E14D9A44300F1FBE4 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 15A0D44D14D9A44300F1FBE4 /* Default.png */; };
 		15A0D45014D9A44600F1FBE4 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 15A0D44F14D9A44600F1FBE4 /* Default@2x.png */; };
@@ -73,6 +78,15 @@
 		15306AF815DEAE0500AE8E1F /* DDXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDXMLNode.m; sourceTree = "<group>"; };
 		15306AFA15DEAE0500AE8E1F /* DDXMLPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDXMLPrivate.h; sourceTree = "<group>"; };
 		153AD6FC15B5E9BA00A200A1 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
+		154D8D9815DF14CA005143CD /* LocalyticsDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalyticsDatabase.h; sourceTree = "<group>"; };
+		154D8D9915DF14CA005143CD /* LocalyticsDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalyticsDatabase.m; sourceTree = "<group>"; };
+		154D8D9A15DF14CA005143CD /* LocalyticsSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalyticsSession.h; sourceTree = "<group>"; };
+		154D8D9B15DF14CA005143CD /* LocalyticsSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalyticsSession.m; sourceTree = "<group>"; };
+		154D8D9C15DF14CA005143CD /* LocalyticsUploader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalyticsUploader.h; sourceTree = "<group>"; };
+		154D8D9D15DF14CA005143CD /* LocalyticsUploader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalyticsUploader.m; sourceTree = "<group>"; };
+		154D8D9E15DF14CA005143CD /* WebserviceConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebserviceConstants.h; sourceTree = "<group>"; };
+		154D8DA315DF15DA005143CD /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		154D8DA515DF15E3005143CD /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		159C874B14D9E8CC000F76E0 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		15A0D44D14D9A44300F1FBE4 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		15A0D44F14D9A44600F1FBE4 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
@@ -140,6 +154,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				154D8DA615DF15E3005143CD /* libsqlite3.dylib in Frameworks */,
+				154D8DA415DF15DA005143CD /* libz.dylib in Frameworks */,
 				15AF6A5915DED5B70034A994 /* CoreLocation.framework in Frameworks */,
 				15B94D0415DEC2CF00529A6E /* MapKit.framework in Frameworks */,
 				159C874C14D9E8CC000F76E0 /* QuartzCore.framework in Frameworks */,
@@ -196,6 +212,20 @@
 			path = Private;
 			sourceTree = "<group>";
 		};
+		154D8D9715DF14CA005143CD /* Localytics */ = {
+			isa = PBXGroup;
+			children = (
+				154D8D9815DF14CA005143CD /* LocalyticsDatabase.h */,
+				154D8D9915DF14CA005143CD /* LocalyticsDatabase.m */,
+				154D8D9A15DF14CA005143CD /* LocalyticsSession.h */,
+				154D8D9B15DF14CA005143CD /* LocalyticsSession.m */,
+				154D8D9C15DF14CA005143CD /* LocalyticsUploader.h */,
+				154D8D9D15DF14CA005143CD /* LocalyticsUploader.m */,
+				154D8D9E15DF14CA005143CD /* WebserviceConstants.h */,
+			);
+			path = Localytics;
+			sourceTree = "<group>";
+		};
 		15A3C38414D916D3007BA9DD = {
 			isa = PBXGroup;
 			children = (
@@ -226,6 +256,9 @@
 				153AD6FC15B5E9BA00A200A1 /* Crashlytics.framework */,
 				15A3C39514D916D4007BA9DD /* Foundation.framework */,
 				15306AEB15DEAE0500AE8E1F /* KissXML */,
+				154D8DA515DF15E3005143CD /* libsqlite3.dylib */,
+				154D8DA315DF15DA005143CD /* libz.dylib */,
+				154D8D9715DF14CA005143CD /* Localytics */,
 				15B94D0315DEC2CF00529A6E /* MapKit.framework */,
 				159C874B14D9E8CC000F76E0 /* QuartzCore.framework */,
 				15A3C39314D916D4007BA9DD /* UIKit.framework */,
@@ -432,6 +465,9 @@
 				15AF6A7D15DEEAC70034A994 /* MapViewController.m in Sources */,
 				15AF6A8215DEEAD20034A994 /* ScheduleViewController.m in Sources */,
 				15AF6A8515DEEB0D0034A994 /* main.m in Sources */,
+				154D8D9F15DF14CA005143CD /* LocalyticsDatabase.m in Sources */,
+				154D8DA015DF14CA005143CD /* LocalyticsSession.m in Sources */,
+				154D8DA115DF14CA005143CD /* LocalyticsUploader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -508,12 +544,13 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JoeyTracker-Prefix.pch";
 				GCC_THUMB_SUPPORT = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "JoeyTracker-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
-				VALID_ARCHS = armv7;
+				VALID_ARCHS = "armv7 armv6";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -531,12 +568,13 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JoeyTracker-Prefix.pch";
 				GCC_THUMB_SUPPORT = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "JoeyTracker-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
-				VALID_ARCHS = armv7;
+				VALID_ARCHS = "armv7 armv6";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

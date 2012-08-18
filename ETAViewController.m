@@ -59,8 +59,6 @@
 {
 	[super viewDidAppear:animated];
     
-	[[UIApplication sharedApplication] setStatusBarStyle: UIStatusBarStyleDefault];
-    
     [self loadETAs];
     [self startTimer];
 }
