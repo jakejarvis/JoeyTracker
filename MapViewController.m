@@ -349,7 +349,7 @@
     
     if([annotation isKindOfClass:[MKPointAnnotation class]] && [annotation title] == nil) {
 
-            MKPinAnnotationView *annotationView = (MKPinAnnotationView *)[_mapView dequeueReusableAnnotationViewWithIdentifier:@"myIdentifier"];
+            MKPinAnnotationView *annotationView = (MKPinAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:@"myIdentifier"];
             
             if (annotationView == nil) {
                 annotationView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"myIdentifier"];
