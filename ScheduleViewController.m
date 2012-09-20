@@ -90,7 +90,7 @@
             secondSchedule = 3;  // show sat day schedule next
     }
     
-    html = [html stringByAppendingString:@"<html><head><style type=\"text/css\">	body { margin:12px 0px 10px 0px; background-color: #e6e2dd; }	td,th { font-family: \"Helvetica\"; font-size:14px;}	th{background-color:#aaa; margin-bottom:10px;} table { padding-bottom:17px; }  hr { border:0; width: 100%; background-color:#000; height:1px; margin-bottom:20px; }	h1 { text-align:center; font-family: \"Helvetica\"; font-size:16px;}</style><meta name=\"viewport\" content=\"width=320; initial-scale=1.0; maximum-scale=1.0\"/></head><body>"];
+    html = [html stringByAppendingString:@"<html><head><style type=\"text/css\">	body { margin:12px 0px 10px 0px; background-color: #e6e2dd; }	td,th { font-family: \"Helvetica\"; font-size:14px;}	th{background-color:#aaa; margin-bottom:10px;} table { padding-bottom:17px; }  hr { border:0; width: 100%; background-color:#000; height:1px; margin-bottom:20px; }	h1 { text-align:center; font-family: \"Helvetica\"; font-size:16px;} * { -webkit-touch-callout: none; -webkit-user-select: none; }</style><meta name=\"viewport\" content=\"width=320; initial-scale=1.0; maximum-scale=1.0\"/></head><body>"];
     
     html = [html stringByAppendingString:[schedules objectAtIndex:firstSchedule]];
     html = [html stringByAppendingString:@"<hr>"];

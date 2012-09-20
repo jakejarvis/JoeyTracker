@@ -14,6 +14,7 @@
 		15306AFE15DEAE0500AE8E1F /* DDXMLElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 15306AF615DEAE0500AE8E1F /* DDXMLElement.m */; };
 		15306AFF15DEAE0500AE8E1F /* DDXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 15306AF815DEAE0500AE8E1F /* DDXMLNode.m */; };
 		153AD6FD15B5E9BA00A200A1 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 153AD6FC15B5E9BA00A200A1 /* Crashlytics.framework */; };
+		154263C11602D59B005C08F1 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 154263C01602D59B005C08F1 /* Default-568h@2x.png */; };
 		154D8D9F15DF14CA005143CD /* LocalyticsDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 154D8D9915DF14CA005143CD /* LocalyticsDatabase.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		154D8DA015DF14CA005143CD /* LocalyticsSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 154D8D9B15DF14CA005143CD /* LocalyticsSession.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		154D8DA115DF14CA005143CD /* LocalyticsUploader.m in Sources */ = {isa = PBXBuildFile; fileRef = 154D8D9D15DF14CA005143CD /* LocalyticsUploader.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -78,6 +79,7 @@
 		15306AF815DEAE0500AE8E1F /* DDXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDXMLNode.m; sourceTree = "<group>"; };
 		15306AFA15DEAE0500AE8E1F /* DDXMLPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDXMLPrivate.h; sourceTree = "<group>"; };
 		153AD6FC15B5E9BA00A200A1 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
+		154263C01602D59B005C08F1 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		154D8D9815DF14CA005143CD /* LocalyticsDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalyticsDatabase.h; sourceTree = "<group>"; };
 		154D8D9915DF14CA005143CD /* LocalyticsDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalyticsDatabase.m; sourceTree = "<group>"; };
 		154D8D9A15DF14CA005143CD /* LocalyticsSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalyticsSession.h; sourceTree = "<group>"; };
@@ -229,6 +231,7 @@
 		15A3C38414D916D3007BA9DD = {
 			isa = PBXGroup;
 			children = (
+				154263C01602D59B005C08F1 /* Default-568h@2x.png */,
 				15A0D44D14D9A44300F1FBE4 /* Default.png */,
 				15A0D44F14D9A44600F1FBE4 /* Default@2x.png */,
 				15A0D45514D9B7B700F1FBE4 /* Icon.png */,
@@ -417,6 +420,7 @@
 				15AF6A9D15DEEB520034A994 /* map@2x.png in Resources */,
 				15AF6A9E15DEEB520034A994 /* schedule.png in Resources */,
 				15AF6A9F15DEEB520034A994 /* schedule@2x.png in Resources */,
+				154263C11602D59B005C08F1 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -478,10 +482,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					armv7,
-					armv6,
-				);
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -493,7 +494,7 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_THUMB_SUPPORT = NO;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_VERSION = "";
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
@@ -502,6 +503,7 @@
 				OTHER_LDFLAGS = "-lxml2";
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
+				VALID_ARCHS = "armv7 armv7s";
 			};
 			name = Debug;
 		};
@@ -509,15 +511,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					armv7,
-					armv6,
-				);
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_THUMB_SUPPORT = NO;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_VERSION = "";
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
@@ -528,12 +527,14 @@
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "armv7 armv7s";
 			};
 			name = Release;
 		};
 		15A3C3BC14D916D4007BA9DD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -546,11 +547,11 @@
 				GCC_THUMB_SUPPORT = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "JoeyTracker-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
-				VALID_ARCHS = "armv7 armv6";
+				VALID_ARCHS = "armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -558,6 +559,7 @@
 		15A3C3BD14D916D4007BA9DD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
@@ -570,11 +572,11 @@
 				GCC_THUMB_SUPPORT = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "JoeyTracker-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
-				VALID_ARCHS = "armv7 armv6";
+				VALID_ARCHS = "armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

@@ -332,7 +332,7 @@
 	if ([overlay isKindOfClass:[MKPolyline class]]) {
 		MKPolylineView *polylineView = [[MKPolylineView alloc] initWithPolyline:overlay];
 		polylineView.strokeColor = [UIColor colorWithRed:48.0/255.0 green:15.0/255.0 blue:0.0/255.0 alpha:0.6];
-		polylineView.lineWidth = 10;
+		polylineView.lineWidth = 6 * [[UIScreen mainScreen] scale];
 		return polylineView;
 	}
 	
@@ -354,6 +354,9 @@
             
             annotationView.enabled = NO;
             annotationView.image=[UIImage imageNamed:@"bus.png"];
+            annotationView.centerOffset = CGPointMake(-(40 / 2), 0);
+            
+            [self.view.superview sendSubviewToBack:annotationView];
             
             return annotationView;
             
